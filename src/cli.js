@@ -1,8 +1,10 @@
+/* eslint-disable no-console */
 import readlineSync from 'readline-sync';
 
+const name = () => readlineSync.question('May I have your name? ');
+
 const showGreeting = () => {
-  const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
 };
 
-export default showGreeting;
+export { showGreeting, name };
