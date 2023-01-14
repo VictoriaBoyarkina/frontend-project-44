@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/VictoriaBoyarkina/frontend-project-44#readme",
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
   },
   "dependencies": {
     "eslint": "^8.31.0",
