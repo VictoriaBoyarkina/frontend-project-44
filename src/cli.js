@@ -61,7 +61,6 @@ let number1 = '';
 let number2 = '';
 let sign = '';
 
-
 function expression() {
   number1 = getRandomInt(0, 99);
   number2 = getRandomInt(1, 99);
@@ -75,17 +74,12 @@ function expression() {
       break;
     case '*':
       correctAnswer = number1 * number2;
-  };
-};
+  }
+}
 
 const gcdRules = () => {
   console.log('Find the greatest common divisor of given numbers.');
 };
-
-export {
-  number, greeting, isEven, findcorrectAnswer, checkAnswer, evenRules, getRandomInt, name, correctAnswer, continueCycle, calculatorRules, expression, number1, number2, sign, gcdRules, expressionGcd
-};
-
 
 function expressionGcd() {
   number1 = getRandomInt(1, 99);
@@ -95,14 +89,37 @@ function expressionGcd() {
       if (number1 % i === 0 && number2 % i === 0) {
         correctAnswer = i;
         break;
-      };
-    };
+      }
+    }
   } else {
     for (let i = number2; i >= 1; i -= 1) {
       if (number1 % i === 0 && number2 % i === 0) {
         correctAnswer = i;
         break;
-      };
-    };
+      }
+    }
+  }
+}
+
+var sequence = [];
+
+function generateSequence() {
+  number1 = getRandomInt(1, 99);
+  number2 = getRandomInt(1, 10);
+  sequence = [];
+  for (let i = 1; i <= 10; i += 1) {
+    number1 += number2;
+    sequence.push(number1);
   };
+  correctAnswer = sequence[number2];
+  sequence[number2] = '...';
+  sequence = sequence.join(' ');
+};
+
+const progressionRules = () => {
+  console.log('What number is missing in the progression?');
+};
+
+export {
+  number, greeting, isEven, findcorrectAnswer, checkAnswer, evenRules, getRandomInt, name, correctAnswer, continueCycle, calculatorRules, expression, number1, number2, sign, gcdRules, expressionGcd,sequence, progressionRules, generateSequence,
 };
