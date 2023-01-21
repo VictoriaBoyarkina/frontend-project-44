@@ -1,5 +1,6 @@
+/* eslint-disable max-len */
 /* eslint-disable no-console */
-import readlineSync from 'readline-sync';
+import readlineSync, { question } from 'readline-sync';
 
 let name = '';
 let number = '';
@@ -15,7 +16,7 @@ function greeting() {
   console.log('Welcometo the Brain Games!');
   name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
-};
+}
 
 function isEven() {
   number = Math.floor(Math.random() * 10);
@@ -23,28 +24,60 @@ function isEven() {
     even = true;
   } else {
     even = false;
-  };
-};
+  }
+}
 
 function findcorrectAnswer() {
   if (even === true) {
     correctAnswer = 'yes';
   } else {
     correctAnswer = 'no';
-  };
-};
+  }
+}
 
 function checkAnswer() {
-  const answer = readlineSync.question('Your answer: ');
+  const answer = parseInt(readlineSync.question('Your answer: '), 10);
   if (answer === correctAnswer) {
     console.log('Correct!');
   } else {
     console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
     console.log(`Let's try again, ${name}!`);
     continueCycle = false;
-  };
+  }
+}
+
+const calculatorRules = () => {
+  console.log('What is the result of the expression?');
 };
 
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min);
+}
+
+const arithmeticSigns = ['+', '-', '*'];
+let number1 = '';
+let number2 = '';
+let sign = '';
+
+
+function expression() {
+  number1 = getRandomInt(0, 99);
+  number2 = getRandomInt(1, 99);
+  sign = arithmeticSigns[Math.floor(Math.random() * arithmeticSigns.length)];
+  switch (sign) {
+    case '+':
+      correctAnswer = number1 + number2;
+      break;
+    case '-':
+      correctAnswer = number1 - number2;
+      break;
+    case '*':
+      correctAnswer = number1 * number2;
+  }
+}
+
 export {
-  number, greeting, isEven, findcorrectAnswer, checkAnswer, evenRules, name, correctAnswer, continueCycle,
+  number, greeting, isEven, findcorrectAnswer, checkAnswer, evenRules, getRandomInt, name, correctAnswer, continueCycle, calculatorRules, expression, number1, number2, sign,
 };
