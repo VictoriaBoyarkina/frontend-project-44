@@ -4,3 +4,4 @@
 <a href="https://codeclimate.com/github/VictoriaBoyarkina/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/b08117e8f80826afbb89/maintainability" /></a>
 asciinema bin/brain-even https://asciinema.org/a/PGQF3HSpgQEhmt1fSek61sE2T
 asciinema bin/brain-calc https://asciinema.org/a/97Xu5rNw0KmvH88iIUTWbN5Wk
+asciinema bin/brain-gcd https://asciinema.org/a/IeMfS0I4VNuLD1N4HAJB26NtP
