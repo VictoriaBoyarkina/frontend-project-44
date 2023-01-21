@@ -75,9 +75,34 @@ function expression() {
       break;
     case '*':
       correctAnswer = number1 * number2;
-  }
-}
+  };
+};
+
+const gcdRules = () => {
+  console.log('Find the greatest common divisor of given numbers.');
+};
 
 export {
-  number, greeting, isEven, findcorrectAnswer, checkAnswer, evenRules, getRandomInt, name, correctAnswer, continueCycle, calculatorRules, expression, number1, number2, sign,
+  number, greeting, isEven, findcorrectAnswer, checkAnswer, evenRules, getRandomInt, name, correctAnswer, continueCycle, calculatorRules, expression, number1, number2, sign, gcdRules, expressionGcd
+};
+
+
+function expressionGcd() {
+  number1 = getRandomInt(1, 99);
+  number2 = getRandomInt(1, 99);
+  if (number1 <= number2) {
+    for (let i = number1; i >= 1; i -= 1) {
+      if (number1 % i === 0 && number2 % i === 0) {
+        correctAnswer = i;
+        break;
+      };
+    };
+  } else {
+    for (let i = number2; i >= 1; i -= 1) {
+      if (number1 % i === 0 && number2 % i === 0) {
+        correctAnswer = i;
+        break;
+      };
+    };
+  };
 };
