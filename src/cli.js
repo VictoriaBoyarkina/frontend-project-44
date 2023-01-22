@@ -1,3 +1,4 @@
+/* eslint-disable import/no-mutable-exports */
 /* eslint-disable max-len */
 /* eslint-disable no-console */
 import readlineSync, { question } from 'readline-sync';
@@ -101,7 +102,7 @@ function expressionGcd() {
   }
 }
 
-var sequence = [];
+let sequence = [];
 
 function generateSequence() {
   number1 = getRandomInt(1, 99);
@@ -110,16 +111,46 @@ function generateSequence() {
   for (let i = 1; i <= 10; i += 1) {
     number1 += number2;
     sequence.push(number1);
-  };
+  }
   correctAnswer = sequence[number2];
   sequence[number2] = '...';
   sequence = sequence.join(' ');
-};
+}
 
 const progressionRules = () => {
   console.log('What number is missing in the progression?');
 };
 
-export {
-  number, greeting, isEven, findcorrectAnswer, checkAnswer, evenRules, getRandomInt, name, correctAnswer, continueCycle, calculatorRules, expression, number1, number2, sign, gcdRules, expressionGcd,sequence, progressionRules, generateSequence,
+const primeRules = () => {
+  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 };
+
+export {
+  number, greeting, isEven, findcorrectAnswer, checkAnswer, evenRules, getRandomInt, name, correctAnswer, continueCycle, calculatorRules, expression, checkYesNo,number1, number2, sign, gcdRules, prime, expressionGcd, primeRules, sequence, progressionRules, generateSequence,
+};
+
+function prime() {
+  let devisor = 0;
+  number = getRandomInt(1, 99);
+  for (let i = 1; i < number / 2; i += 1) {
+    if (number % i === 0) {
+      devisor = i;
+    }
+  }
+  if (devisor === 1) {
+    correctAnswer = 'yes';
+  } else {
+    correctAnswer = 'no';
+  }
+}
+
+function checkYesNo() {
+  const answer = readlineSync.question('Your answer: ');
+  if (answer === correctAnswer) {
+    console.log('Correct!');
+  } else {
+    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
+    console.log(`Let's try again, ${name}!`);
+    continueCycle = false;
+  }
+}
