@@ -3,7 +3,7 @@
 /* eslint-disable no-console */
 import readlineSync from 'readline-sync';
 import {
-  number, greeting, isEven, findcorrectAnswer, checkAnswer, evenRules, name, correctAnswer, continueCycle
+  number, greeting, isEven, findcorrectAnswer, checkYesNo, evenRules, name, correctAnswer, continueCycle
 } from './../src/cli.js';
 
 greeting();
@@ -15,7 +15,7 @@ do {
   isEven(number);
   console.log(`Question: ${number}`);
   findcorrectAnswer(isEven);
-  checkAnswer(correctAnswer);
+  checkYesNo(correctAnswer);
   if (i === 3) {
     console.log(`Congratulations, ${name}!`);
   };
