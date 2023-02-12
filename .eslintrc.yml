@@ -18,6 +18,14 @@ extends:
 parserOptions:
   ecmaVersion: latest
 
-rules:
+rules: {
   no-underscore-dangle: [2, { "allow": ["__filename", "__dirname"] }]
+  'import extensions': [
+    'error',
+    'ignorePackages',
+    {
+      'js': 'never'
+    }
+  ]
+}
 
