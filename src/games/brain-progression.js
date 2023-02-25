@@ -1,6 +1,8 @@
 import {
- checkAnswer, name, greeting, continueCycle, getRandomInt,
-} from '../cli.js';
+ checkAnswer, name, greeting, continueCycle,
+} from '../main.js';
+
+import getRandomInt from '../utils.js';
 
 const progressionRules = () => {
   console.log('What number is missing in the progression?');
