@@ -7,7 +7,7 @@ let continueCycle = true;
 const name = readlineSync.question('May I have your name? ')
 
 function greeting() {
-  console.log('Welcometo the Brain Games!');
+  console.log('Welcome to the Brain Games!');
 }
 
 function checkAnswer(correctAnswer) {

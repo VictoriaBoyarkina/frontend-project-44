@@ -5,7 +5,7 @@ import readlineSync from 'readline-sync';
 function brainGames() {
   console.log('Welcometo the Brain Games!');
   const name = readlineSync.question('May I have your name? ')
-  console.log(`Hello, ${name}`)
+  console.log(`Hello, ${name}!`)
 }
 
 export default brainGames;
