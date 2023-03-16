@@ -1,3 +1,4 @@
-import brainProgression from '../src/games/brain-progression.js';
+import { playGame } from '../src/main.js';
+import { progressionRules, calcResult, question } from '../src/games/brain-progression.js'
 
-brainProgression();
+playGame(progressionRules, calcResult, question);

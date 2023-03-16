@@ -19,8 +19,8 @@ parserOptions:
   ecmaVersion: latest
 
 rules: {
-  no-underscore-dangle: [2, { "allow": ["__filename", "__dirname"] }]
-  'import extensions': [
+  no-underscore-dangle: [2, { "allow": ["__filename", "__dirname"] }],
+  'import/extensions': [
     'error',
     'ignorePackages',
     {

@@ -1,3 +1,4 @@
-import brainPrime from '../src/games/brain-prime.js';
+import { playGame } from '../src/main.js';
+import { primeRules, calcResult, question } from '../src/games/brain-prime.js'
 
-brainPrime();
+playGame(primeRules, calcResult, question);

@@ -1,3 +1,4 @@
-import brainEven from '../src/games/brain-even.js';
+import { playGame } from '../src/main.js';
+import { evenRules, calcResult, question } from '../src/games/brain-even.js'
 
-brainEven();
+playGame(evenRules, calcResult, question);

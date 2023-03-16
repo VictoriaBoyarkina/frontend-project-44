@@ -1,3 +1,4 @@
-import brainCalc from '../src/games/brain-calc.js';
+import { playGame } from '../src/main.js';
+import { calculatorRules, calcResult, question } from '../src/games/brain-calc.js'
 
-brainCalc();
+playGame(calculatorRules, calcResult, question);

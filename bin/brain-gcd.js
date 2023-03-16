@@ -1,3 +1,4 @@
-import brainGcd from '../src/games/brain-gcd.js';
+import { playGame } from '../src/main.js';
+import { gcdRules, calcResult, question } from '../src/games/brain-gcd.js'
 
-brainGcd();
+playGame(gcdRules, calcResult, question);
