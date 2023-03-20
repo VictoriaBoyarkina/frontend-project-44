@@ -1,22 +1,26 @@
+/* eslint-disable no-console */
+import getRandomInt from '../utils.js';
 
 const primeRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const calcResult = (number1) => {
+const calcResult = (number) => {
   let devisor = 0;
-  for (let i = 1; i < number1; i += 1) {
-  if (number1 % i === 0) {
-    devisor = i;
+  for (let i = 1; i < number; i += 1) {
+    if (number % i === 0) {
+      devisor = i;
+    }
   }
-}
-if (devisor === 1) {
-  return 'yes';
-} else {
+  if (devisor === 1) {
+    return 'yes';
+  }
   return 'no';
-  }
 };
 
-const question = (number1) => {
-  return `Question: ${number1}`;
+const getQuestionAndAnswerPrime = () => {
+  const number = getRandomInt(0, 100);
+  const questionCalc = `Question: ${number}`;
+  const correctAnswerCalc = String(calcResult(number));
+  return [questionCalc, correctAnswerCalc];
 };
 
-export { primeRules, calcResult, question };
+export { primeRules, getQuestionAndAnswerPrime };

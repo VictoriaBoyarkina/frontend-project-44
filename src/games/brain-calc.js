@@ -5,12 +5,11 @@ const calculatorRules = 'What is the result of the expression?';
 
 const arithmeticSigns = ['+', '-', '*'];
 
-const getSign = (arithmeticSigns) => {
-  return arithmeticSigns[Math.floor(Math.random() * arithmeticSigns.length)];
-};
+const getSign = () => (arithmeticSigns[Math.floor(Math.random() * arithmeticSigns.length)]);
 
 const sign = getSign(arithmeticSigns);
 
+// eslint-disable-next-line consistent-return
 const calcResult = (numberOne, numberTwo) => {
   switch (sign) {
     case '+':
@@ -25,15 +24,11 @@ const calcResult = (numberOne, numberTwo) => {
 };
 
 const getQuestionAndAnswerCalc = () => {
-  const result = []
   const number1 = getRandomInt(0, 100);
   const number2 = getRandomInt(0, 100);
   const questionCalc = `Question: ${number1} ${sign} ${number2}`;
-  result.push(questionCalc);
   const correctAnswerCalc = String(calcResult(number1, number2));
-  result.push(correctAnswerCalc);
-  return result;
+  return [questionCalc, correctAnswerCalc];
 };
-
 
 export { calculatorRules, getQuestionAndAnswerCalc };

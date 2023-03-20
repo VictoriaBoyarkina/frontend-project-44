@@ -1,20 +1,27 @@
 /* eslint-disable no-console */
+import getRandomInt from '../utils.js';
+
 const gcdRules = 'Find the greatest common divisor of given numbers.';
 
 function calcResult(number1, number2) {
-  while(number1 != number2) {
-    if (number1 > number2) {
-      number1 -= number2;
+  let first = number1;
+  let second = number2;
+  while (first !== second) {
+    if (first > second) {
+      first -= number2;
     } else {
-      number2 -= number1;
+      second -= number1;
     }
   }
-  return number1;
+  return first;
+}
+
+const getQuestionAndAnswerGcd = () => {
+  const number1 = getRandomInt(0, 100);
+  const number2 = getRandomInt(0, 100);
+  const questionCalc = `Question: ${number1} ${number2}`;
+  const correctAnswerCalc = String(calcResult(number1, number2));
+  return [questionCalc, correctAnswerCalc];
 };
 
-const question = (number1, number2) => {
-  return `Question: ${number1} ${number2}`;
-};
-
-export { gcdRules, calcResult, question };
-
+export { gcdRules, getQuestionAndAnswerGcd };
