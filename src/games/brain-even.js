@@ -7,11 +7,11 @@ const calcResult = (number) => {
     return 'no';
   } 
   return 'yes'
-
-}
+};
 
 const question = (number1) => {
   return `Question: ${number1}`;
-}
+};
 
 export { calcResult, question, evenRules };
+

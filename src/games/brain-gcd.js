@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-
 const gcdRules = 'Find the greatest common divisor of given numbers.';
 
 function calcResult(number1, number2) {
@@ -11,10 +10,11 @@ function calcResult(number1, number2) {
     }
   }
   return number1;
-}
+};
 
 const question = (number1, number2) => {
   return `Question: ${number1} ${number2}`;
-}
+};
 
 export { gcdRules, calcResult, question };
+

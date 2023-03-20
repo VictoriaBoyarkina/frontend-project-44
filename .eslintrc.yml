@@ -24,7 +24,7 @@ rules: {
     'error',
     'ignorePackages',
     {
-      'js': 'never'
+      'js': 'always'
     }
   ]
 }

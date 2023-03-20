@@ -13,10 +13,10 @@ if (devisor === 1) {
 } else {
   return 'no';
   }
-}
+};
 
 const question = (number1) => {
   return `Question: ${number1}`;
-}
+};
 
 export { primeRules, calcResult, question };
