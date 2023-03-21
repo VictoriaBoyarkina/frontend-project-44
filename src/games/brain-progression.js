@@ -19,8 +19,8 @@ const calcResult = (number1, number2) => {
 
 const getQuestion = (number1, number2) => {
   const question = progression(number1, number2);
-  question[number2] = '...';
-  return question.join(', ');
+  question[number2] = '..';
+  return question.join(' ');
 };
 
 const getQuestionAndAnswerProgression = () => {
