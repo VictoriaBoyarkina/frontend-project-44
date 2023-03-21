@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import getRandomInt from '../utils.js';
 
 const evenRules = 'Answer "yes" if the number is even, otherwise answer "no".';

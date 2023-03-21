@@ -1,19 +1,18 @@
-/* eslint-disable no-console */
 import getRandomInt from '../utils.js';
 
 const gcdRules = 'Find the greatest common divisor of given numbers.';
 
 function calcResult(number1, number2) {
-  let first = number1;
-  let second = number2;
-  while (first !== second) {
-    if (first > second) {
-      first -= number2;
+  let a = number1;
+  let b = number2;
+  while (a !== b) {
+    if (a > b) {
+      a -= b;
     } else {
-      second -= number1;
+      b -= a;
     }
   }
-  return first;
+  return a;
 }
 
 const getQuestionAndAnswerGcd = () => {

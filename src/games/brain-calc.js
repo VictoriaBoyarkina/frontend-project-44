@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import getRandomInt from '../utils.js';
 
 const calculatorRules = 'What is the result of the expression?';

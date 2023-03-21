@@ -8,14 +8,14 @@ const playGame = (gameRules, getQuestionAndAnswer) => {
   console.log('Welcome to the Brain Games!');
   console.log(gameRules);
   for (let i = 0; i < 3; i += 1) {
-    const [askquestion, correctAnswer] = getQuestionAndAnswer();
-    console.log(askquestion);
+    const [askQuestion, correctAnswer] = getQuestionAndAnswer();
+    console.log(askQuestion);
     const answer = readlineSync.question('Your answer: ');
     if (answer === correctAnswer) {
       console.log('Correct!');
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'\nLet's try again, ${name}!`);
-      return false;
+      return;
     }
   }
   console.log(`Congratulations, ${name}!`);
