@@ -9,17 +9,10 @@ const isEven = (number) => {
   return false;
 };
 
-const calcResult = (number) => {
-  if (isEven(number) === true) {
-    return 'yes';
-  }
-  return 'no';
-};
-
 const getQuestionAndAnswerEven = () => {
   const number = getRandomInt(0, 100);
   const questionEven = `Question: ${number}`;
-  const correctAnswerEven = String(calcResult(number));
+  const correctAnswerEven = isEven(number) ? 'yes' : 'no';
   return [questionEven, correctAnswerEven];
 };
 

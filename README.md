@@ -2,6 +2,14 @@
 [![Actions Status](https://github.com/VictoriaBoyarkina/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/VictoriaBoyarkina/frontend-project-44/actions)
 
 <a href="https://codeclimate.com/github/VictoriaBoyarkina/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/b08117e8f80826afbb89/maintainability" /></a>
+
+Games:
+
+brain-calc
+
+$ make brain-even
+<script async id="asciicast-nBiwzB9BzjsCoE68Be3KKNed6" src="https://asciinema.org/a/nBiwzB9BzjsCoE68Be3KKNed6.js"></script>
+
 asciinema bin/brain-even https://asciinema.org/a/PGQF3HSpgQEhmt1fSek61sE2T
 asciinema bin/brain-calc https://asciinema.org/a/97Xu5rNw0KmvH88iIUTWbN5Wk
 asciinema bin/brain-gcd https://asciinema.org/a/IeMfS0I4VNuLD1N4HAJB26NtP

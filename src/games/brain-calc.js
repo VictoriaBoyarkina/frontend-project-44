@@ -2,14 +2,8 @@ import getRandomInt from '../utils.js';
 
 const calculatorRules = 'What is the result of the expression?';
 
-const arithmeticSigns = ['+', '-', '*'];
-
-const getSign = () => (arithmeticSigns[Math.floor(Math.random() * arithmeticSigns.length)]);
-
-const sign = getSign(arithmeticSigns);
-
 // eslint-disable-next-line consistent-return
-const calcResult = (numberOne, numberTwo) => {
+const calcResult = (numberOne, numberTwo, sign) => {
   switch (sign) {
     case '+':
       return numberOne + numberTwo;
@@ -18,16 +12,19 @@ const calcResult = (numberOne, numberTwo) => {
     case '*':
       return numberOne * numberTwo;
     default:
-      break;
+      throw new Error(`Unknown sign: '${sign}'!`);
   }
 };
 
 const getQuestionAndAnswerCalc = () => {
+  const arithmeticSigns = ['+', '-', '*'];
   const number1 = getRandomInt(0, 100);
   const number2 = getRandomInt(0, 100);
+  const index = getRandomInt(0, arithmeticSigns.length);
+  const sign = arithmeticSigns[index];
   const questionCalc = `Question: ${number1} ${sign} ${number2}`;
-  const correctAnswerCalc = String(calcResult(number1, number2));
-  return [questionCalc, correctAnswerCalc];
+  const correctAnswerCalc = String(calcResult(number1, number2, sign));
+  return [questionCalc, correctAnswerCalc, sign];
 };
 
 export { calculatorRules, getQuestionAndAnswerCalc };

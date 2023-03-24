@@ -1,15 +1,16 @@
 /* eslint-disable no-console */
 import readlineSync from 'readline-sync';
 
+const roundsCount = 3;
 // eslint-disable-next-line consistent-return
 const playGame = (gameRules, getQuestionAndAnswer) => {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log('Welcome to the Brain Games!');
   console.log(gameRules);
-  for (let i = 0; i < 3; i += 1) {
-    const [askQuestion, correctAnswer] = getQuestionAndAnswer();
-    console.log(askQuestion);
+  for (let i = 0; i < roundsCount; i += 1) {
+    const [question, correctAnswer] = getQuestionAndAnswer();
+    console.log(question);
     const answer = readlineSync.question('Your answer: ');
     if (answer === correctAnswer) {
       console.log('Correct!');
