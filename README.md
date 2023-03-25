@@ -3,15 +3,38 @@
 
 <a href="https://codeclimate.com/github/VictoriaBoyarkina/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/b08117e8f80826afbb89/maintainability" /></a>
 
-Games:
+## Games:
 
-brain-calc
+### brain-calc
 
-$ make brain-even
-<script async id="asciicast-nBiwzB9BzjsCoE68Be3KKNed6" src="https://asciinema.org/a/nBiwzB9BzjsCoE68Be3KKNed6.js"></script>
+	$ make brain-calc
 
-asciinema bin/brain-even https://asciinema.org/a/PGQF3HSpgQEhmt1fSek61sE2T
-asciinema bin/brain-calc https://asciinema.org/a/97Xu5rNw0KmvH88iIUTWbN5Wk
-asciinema bin/brain-gcd https://asciinema.org/a/IeMfS0I4VNuLD1N4HAJB26NtP
-asciinema bin/brain-progression https://asciinema.org/a/oDDRRxAnGH70S8Fm6J71abia2
-asciinema bin/brain-prime https://asciinema.org/a/yqiamByCwhaD89YdmplWTHfxD
+[![asciicast](https://asciinema.org/a/h43xUZmd0vSrcGIjPCKKQrY73.svg)](https://asciinema.org/a/h43xUZmd0vSrcGIjPCKKQrY73)
+
+
+### brain-even
+
+	$ make brain-even
+
+[![asciicast](https://asciinema.org/a/c8NykT0Mugfsyd5v6S2j86PMA.svg)](https://asciinema.org/a/c8NykT0Mugfsyd5v6S2j86PMA)
+
+
+### brain-prime
+
+	$ make brain-prime
+
+[![asciicast](https://asciinema.org/a/pCmOreoq4mVik4Wpoau98jYMT.svg)](https://asciinema.org/a/pCmOreoq4mVik4Wpoau98jYMT)
+
+
+### brain-gcd
+
+	$ make brain-gcd
+
+[![asciicast](https://asciinema.org/a/Ey9QN6cxJRbOuCGvtemTfXeGk.svg)](https://asciinema.org/a/Ey9QN6cxJRbOuCGvtemTfXeGk)
+
+
+### brain-progression
+
+	$ make brain-progression
+
+[![asciicast](https://asciinema.org/a/tBts0hLoHvnaJdfV6oaPhOGas.svg)](https://asciinema.org/a/tBts0hLoHvnaJdfV6oaPhOGas)
