@@ -4,10 +4,10 @@ const progressionRules = 'What number is missing in the progression?';
 
 const progression = (number1, number2) => {
   const sequence = [];
-  let first = number1;
+  let current = number1;
   for (let i = 1; i <= 10; i += 1) {
-    sequence.push(first);
-    first += number2;
+    sequence.push(current);
+    current += number2;
   }
   return sequence;
 };

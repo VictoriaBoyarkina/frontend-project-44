@@ -2,7 +2,7 @@
 import readlineSync from 'readline-sync';
 
 const roundsCount = 3;
-// eslint-disable-next-line consistent-return
+
 const playGame = (gameRules, getQuestionAndAnswer) => {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
