@@ -16,8 +16,8 @@ function getGCD(number1, number2) {
 }
 
 const getQuestionAndAnswerGcd = () => {
-  const number1 = getRandomInt(0, 100);
-  const number2 = getRandomInt(0, 100);
+  const number1 = getRandomInt(1, 100);
+  const number2 = getRandomInt(1, 100);
   const questionCalc = `Question: ${number1} ${number2}`;
   const correctAnswerCalc = String(getGCD(number1, number2));
   return [questionCalc, correctAnswerCalc];
